@@ -1,4 +1,4 @@
-# Biblio (Master Branch) <br>
+# Biblio<br>
 # Obiettivo:<br>
 Creare un'applicazione Spring per gestire una lista di libri con operazioni CRUD e logica di business.<br>
 # L'applicazione deve consentire di:<br>
