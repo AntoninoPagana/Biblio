@@ -15,18 +15,34 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
+    /**
+     * @param book
+     * @return book added
+     */
     public Book addBook(Book book) {
         return bookRepository.save(book);
     }
 
+    /**
+     * @return book list
+     */
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
 
+    /**
+     * @param id
+     * @return book searched by id
+     */
     public Optional<Book> getBookById(Long id) {
         return bookRepository.findById(id);
     }
 
+    /**
+     * @param id
+     * @param book
+     * @return updated book
+     */
     public Optional<Book> updateBook(Long id, Book book) {
         Optional<Book> bookToReturn = bookRepository.findById(id);
         if (bookToReturn.isPresent()) {
@@ -41,12 +57,20 @@ public class BookService {
         }
     }
 
+    /**
+     * @param id
+     * @return deleted book by id
+     */
     public Optional<Book> deleteBook(Long id) {
         Optional<Book> bookToDelete = bookRepository.findById(id);
         bookRepository.delete(bookToDelete.get());
         return bookToDelete;
     }
 
+    /**
+     * @param id
+     * @return lended book
+     */
     public Optional<Book> lendBook(Long id) {
         Optional<Book> book = bookRepository.findById(id);
         if (book.isPresent() && book.get().getDisponibilitaEnum() == DisponibilitaEnum.DISPONIBILE) {
@@ -59,6 +83,11 @@ public class BookService {
         return book;
     }
 
+    /**
+     * @param id
+     * @return lendend book returned DISPONIBILE
+     * @throws Exception
+     */
     public Optional<Book> returnBook(Long id) throws Exception {
         Optional<Book> libroToReturn = bookRepository.findById(id);
         if (libroToReturn.isPresent()) {
