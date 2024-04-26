@@ -1,4 +1,5 @@
 # Biblio<br>
+https://elements.getpostman.com/redirect?entityId=33206900-f7d57a09-be9e-427d-a5a8-e21fd92366f1&entityType=collection
 # Obiettivo:<br>
 Creare un'applicazione Spring per gestire una lista di libri con operazioni CRUD e logica di business.<br>
 # L'applicazione deve consentire di:<br>
