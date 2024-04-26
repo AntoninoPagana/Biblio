@@ -35,8 +35,8 @@ Creare un'applicazione Spring per gestire una lista di libri con operazioni CRUD
  POST /books/create: Aggiunge un nuovo libro.<br>
  PUT /books/update/{id}: Aggiorna i dettagli di un libro esistente.<br>
  DELETE /books/delete/{id}: Rimuove un libro dall'elenco.<br>
- PUT /books/{id}/lend: Gestisce il prestito di un libro.<br>
- PUT /books/{id}/return: Gestisce il ritorno di un libro prestato.<br>
+ PUT /books/lend/{id}: Gestisce il prestito di un libro.<br>
+ PUT /books/return/{id}: Gestisce il ritorno di un libro prestato.<br>
 #
 Implementazione della logica di business nei metodi di BookService.<br>
 Configurazione di Spring per gestire le dipendenze e le richieste HTTP.<br>
