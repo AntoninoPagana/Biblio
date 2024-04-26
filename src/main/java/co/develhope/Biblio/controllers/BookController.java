@@ -40,7 +40,7 @@ public class BookController {
      * @param id
      * @return book searched by id
      */
-    @GetMapping("/readSingle'{id}")
+    @GetMapping("/readSingle/{id}")
     public ResponseEntity<Optional<Book>> readSingle(@PathVariable Long id) {
         Optional<Book> bookToRead = bookService.getBookById(id);
         return ResponseEntity.ok().body(bookToRead);
